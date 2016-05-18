@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.js"></script>
+ 
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+  <style type="text/css">
+    //basic reset
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  position: relative;
+  text-align: center;
+  width: 800px;
+  height: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 auto;
+  text-align: center;
+  font-family: ‘Courier New’, Courier, monospace;
+}
+
+#crop {
+  width: 800px;
+  height: 250px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+}
+
+img {
+  width: 1100px;
+  display: block;
+  margin-top: -300px;
+  margin-left: -145px;
+  overflow: hidden;
+}
+
+#content ul {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs {
+  display: inline-block;
+  font-size: 16px;
+  font-family: ‘Courier New’, Courier, monospace;
+  line-height: 30px;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}
+.tabs:hover{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.tab_desc {
+  height: auto;
+  width: 500px;
+  margin: 0 auto;
+  display: none;
+  font-family: ‘Courier New’, Courier, monospace;
+  font-size: 20px;
+}
+
+#a4 p {
+  display: inline-block;
+}
+
+#a2 {
+  display: block;
+}
+
+  </style>
+
+  <title> by jahmzu</title>
+
+<script type='text/javascript'>//<![CDATA[
+window.onload=function(){
+$(document).ready(function() {
+	var titles = ["Home", 1, "Menu", 3, "History", 5, "Contact", 7]
+  var description = ["<p>Welcome to Mama's Stone Bowl. We are a small mom-and-pop restaurant located in the heart of Seattle. Our mission is to mesh quality and authenticity in every dish.</p> <p>We love our Korean food as well as our Korean culture and we hope that you will too.Enjoy!</p>", "<p>Mama's Classic Stone Pot : $10</p><P>Mama's Seafood Stone Pot : $10</P><p>Mama's Island Style Stone Pot : $10</p><p>Mama's Ox Tail Soup : $8</p>", "<p>The dohl-sot easily translated as 'stone bowl' was and continues to be a staple way to serve an all time favorite Korean Dish - BiBimBap. Commonly referred to as dohl-sot bibimbap, the dish has widespread fame in America. Consisting of rice, steamed to perfection, a mixture of vegetables including seasoned spinach, bean sprouts, cabbage, aged kimchee, heaping serving of marinated beef and a beautiful egg cooked to absolute perfection. The bowl is prepared over heat in order to cook the rice to a crisp offering an amazing seasoned rice cracker at the end of the meal. The bowl will be expertly mixed using a well-seasoned korean pepper paste in addition an absolutely perfect serving of earthy sesame oil. Mouth watering!</p>", "<p>Telephone: (206) 867-5309</p><p>Address: 123 Main Street</p><p>Seattle, Washington 98301</p><p>Come join us!</p>"]
+  
+  $("#content").append('<h1>Mama\'s Stone Bowl</h1>');
+  $("h1").after('<div id="crop">');
+  $("#crop").append('<img src="http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2015/1/15/0/FNM_030115-Simple-Seoul-Bibimbap-Recipe_s4x3.jpg" />');
+  $("#crop").after('<ul>');
+	for(var i = 1; i<=8; i+=2) {
+  	$('ul').append('<li class="tabs" id="a'+titles[i]+'">'+titles[i-1]+'</li');
+  };
+  
+  for(var j = 1; j<=4; j++) {
+  	$('ul').after("<div class='tab_desc' id='a"+j*2+"'>"+description[j-1]+"</div>");
+  };
+  
+  $(".tabs").click(function() {
+    var elId = $(this).attr("id");
+    $(".tab_desc").stop().fadeOut().promise().done(function() {
+      switch (elId) {
+        case "a1":
+          $("#a2").fadeIn(500);
+          break;
+        case "a3":
+          $("#a4").fadeIn(500);
+          break;
+        case "a5":
+          $("#a6").fadeIn(500);
+          break;
+        case "a7":
+          $("#a8").fadeIn(500);
+          break;
+      }
+    });
+  });
+
+});
+
+}//]]> 
+
+</script>
+
+  
+</head>
+
+<body>
+  <!DOCTYPE html>
+
+<body>
+  <div id="content"></div>
+</body>
+
+  
+</body>
+
+</html>
